@@ -1,0 +1,46 @@
+﻿@model IEnumerable<User>
+@{ViewBag.Title = "Вместе! - Коллектив";}
+<h2>Коллектив</h2><br />
+<div class="widget has-shadow">
+    <div class="widget-body">
+        <div class="table-responsive">
+            <table id="export-table" class="table mb-0">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>ФИО</th>
+                        <th>Телефон</th>
+                        <th>Адрес</th>
+                        <th>Должность</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int i = 0; }
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <td><span class="text-primary">@(++i)</span></td>
+                            <td>@item.UserName</td>
+                            <td>@item.PhoneNumber</td>
+                            <td>@item.Address</td>
+                            <td>@item.Position</td>
+                            <td class="td-actions">
+                                <a href="#"><i class="la la-edit edit"></i></a>
+                                <a href="#"><i class="la la-close delete"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+                </div>
+            </div>
+
+@section EmployeesScripts {
+    <script src="~/assets/js/components/tables/tables.js"></script>
+}
