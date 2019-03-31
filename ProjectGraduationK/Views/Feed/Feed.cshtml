@@ -1,0 +1,35 @@
+﻿@{ViewBag.Title = "Вместе! - Живая лента";}
+
+<h2>Живая лента</h2><br />
+
+<div class="widget has-shadow">
+    <div class="publisher publisher-multi bg-white">
+        <textarea id="inputMessage" class="publisher-input" rows="4"
+                  placeholder="Напишите здесь ваше сообщение..."></textarea>
+        <div class="publisher-bottom">
+            <div class="d-inline-block">
+                <a class="publisher-btn">
+                    <i class="la la-image"></i>
+                </a>
+                <a class="publisher-btn">
+                    <i class="la la-camera"></i>
+                </a>
+                <a class="publisher-btn">
+                    <i class="la la-paperclip"></i>
+                </a>
+            </div>
+            <div class="d-inline-block pull-right">
+                <button id="publishButton" type="submit" class="btn btn-gradient-01" />Опубликовать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="messages"></div>
+
+@section FeedScripts{
+    <script src="~/js/feed.js"></script>
+    <script src="~/assets/js/pages/newsfeed.min.js"></script>
+    <script src="~/assets/js/components/tables/tables.js"></script>
+}
+

@@ -1,0 +1,55 @@
+﻿@*Not used view*@
+
+
+    <div class="widget has-shadow">
+        <div class="widget-header d-flex align-items-center">
+            <div class="user-image">
+                <img class="rounded-circle"
+                     src="assets/img/avatar/avatar-04.jpg" alt="...">
+            </div>
+            <div class="d-flex flex-column mr-auto">
+                <div class="title">
+                    <span class="username">Анастасия Кондратина</span> написала
+                </div>
+                <div class="time">52 минуты назад</div>
+            </div>
+            <div class="widget-options">
+                <div class="dropdown">
+                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                        <i class="la la-ellipsis-h"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a name="editPost" href="javascript:void(0)" data-id="' + messages[i].messageId +'" class="dropdown-item">
+                            <i class="la la-edit"></i>Edit Post
+                        </a>
+                        <a name="deletePost" href="javascript:void(0)" data-id="' + messages[i].messageId +'" class="dropdown-item">
+                            <i class="la la-trash"></i>Delete Post
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget-body">
+            <p>' + messages[i].messageText + '</p>
+        </div>
+        <div class="widget-footer d-flex align-items-center">
+            <div class="col-xl-8 col-md-8 col-7 no-padding d-flex justify-content-start align-items-center">
+            </div>
+            <div class="col-xl-4 col-md-4 col-5 no-padding d-flex justify-content-end">
+                <div class="meta">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="la la-comment"></i><span class="numb">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="la la-heart-o"></i><span class="numb">18</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
