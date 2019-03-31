@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>@ViewBag.Title</title>
+        <meta name="description" content="">
+        <!-- Подключение шрифта -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: { "families": ["Montserrat:400,500,600,700", "Noto+Sans:400,700"] },
+                active: function () {
+                    sessionStorage.fonts = true;
+                }
+            });
+        </script>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/favicon-16x16.png">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="~/assets/vendors/css/base/bootstrap.min.css">
+        <link rel="stylesheet" href="~/assets/vendors/css/base/elisyam-1.5.min.css">
+        <link rel="stylesheet" href="~/assets/css/lity/lity.min.css">
+        <link rel="stylesheet" href="~/assets/css/datatables/datatables.min.css">
+        <link rel="stylesheet" href="~/node_modules/fullcalendar/dist/fullcalendar.min.css" />
+        <link rel="stylesheet" href="~/node_modules/fullcalendar/dist/fullcalendar.print.css" media="print" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.css' />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.css' />
+    </head>
+
+    <body id="page-top">
+        <div class="page db-social">
+            <!-- Begin Header -->
+            <header class="header">
+                <nav class="navbar fixed-top">
+
+                    <!-- Начало строки поиска-->
+                    <div class="search-box">
+                        <button class="dismiss"><i class="ion-close-round"></i></button>
+                        <form id="searchForm" action="#" role="search">
+                            <input type="search" placeholder="Начните поиск здесь..." class="form-control">
+                        </form>
+                    </div>
+                    <!-- Конец строки поиска-->
+                    <!-- Начало шапки -->
+                    <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
+                        <!-- Начало логотип -->
+                        <div class="navbar-header">
+                            <a href="db-default.html" class="navbar-brand">
+                                <div class="brand-image brand-big">
+                                    <img src="~/assets/img/logo-big.png" alt="logo" class="logo-big">
+                                </div>
+                                <div class="brand-image brand-small">
+                                    <img src="~/assets/img/logo.png" alt="logo" class="logo-small">
+                                </div>
+                            </a>
+                            <!-- Начало бургер-меню -->
+                            <a id="toggle-btn" href="#" class="menu-btn active">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <!-- Конец бургер-меню -->
+                        </div>
+                        <!-- Конец логотипа -->
+                        <!-- Начало меню шапки-->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
+
+                            <!-- Поиск -->
+                            <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="la la-search"></i></a></li>
+                            <!-- Конец поиска -->
+                            <!-- Уведомления -->
+                            <li class="nav-item dropdown">
+                                <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="la la-bell animated infinite swing"></i><span class="badge-pulse"></span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu notification">
+                                    <li>
+                                        <div class="notifications-header">
+                                            <div class="title">Уведомления (3)</div>
+                                            <div class="notifications-overlay"></div>
+                                            <img src="assets/img/notifications/01.jpg" alt="..." class="img-fluid">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    Зарегистрирован новый пользователь
+                                                </div>
+                                                <span class="date">2 часа назад</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    В календарь добавлено новое событие
+                                                </div>
+                                                <span class="date">7 часов назад</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    Новая статья в базе знаний
+                                                </div>
+                                                <span class="date">7 часов назад</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">Смотреть все уведомления</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Конец уведомлений -->
+                            <!-- Начало профиль пользователя-->
+                            <li class="nav-item dropdown">
+                                <a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><img src="~/assets/img/avatar/avatar-01.jpg" alt="..." class="avatar rounded-circle"></a>
+                                <ul aria-labelledby="user" class="user-size dropdown-menu">
+                                    <li>
+                                        <div class="widget-01">
+                                            <h3 id="currentUserName">@User.Identity.Name</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Profile" asp-action="Profile" class="dropdown-item">
+                                            Перейти в профиль
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="logOutButton" class="dropdown-item">
+                                            Выйти
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Конец профиль пользователя -->
+                        </ul>
+                    </div>
+                    <!-- Конец шапки -->
+                </nav>
+            </header>
+
+            <!-- Begin Page Content -->
+            <div class="page-content d-flex align-items-stretch">
+                <div class="default-sidebar">
+                    <!-- Begin Side Navbar -->
+                    <nav class="side-navbar box-scroll sidebar-scroll">
+                        <!-- Begin Main Navigation -->
+                        <ul class="list-unstyled">
+                            <li>
+                                <a asp-controller="Feed" asp-action="Feed" class="active">
+                                    <i class="la la-comment"></i><span>Живая лента</span>
+                                </a>
+                            </li>
+                            <li><a asp-controller="Calendar" asp-action="Calendar"><i class="la la-calendar"></i><span>Календарь</span></a></li>
+                            <li><a href="#"><i class="la la-files-o"></i><span>Библиотека</span></a></li>
+                            <li><a asp-controller="Employees" asp-action="Employees"><i class="la la-group"></i><span>Коллектив</span></a></li>
+                            <li><a asp-controller="Faq" asp-action="Faq"><i class="la la-question-circle"></i><span>Вопросы</span></a></li>
+                        </ul>
+                        <!-- End Main Navigation -->
+                    </nav>
+                    <!-- End Side Navbar -->
+
+
+                </div>
+                <!-- End Left Sidebar -->
+                <div class="content-inner">
+                    <div class="container-fluid">
+                        <!-- Begin Page Header-->
+
+                        <div class="row flex-row">
+                            <div class="col-xl-12 col-12">
+                                @RenderBody()
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Container -->
+
+                    <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+                </div>
+                <!-- End Content -->
+            </div>
+            <!-- End Page Content -->
+        </div>
+        <!-- Begin Vendor Js -->
+        <script src="~/assets/vendors/js/base/jquery.min.js"></script>
+        <script src="~/assets/vendors/js/base/core.min.js"></script>
+        <!-- End Vendor Js -->
+        <!-- Begin Page Vendor Js -->
+        <script src="~/assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+
+        <script src="~/assets/vendors/js/app/app.min.js"></script>
+        <script src="~/assets/vendors/js/datatables/datatables.min.js"></script>
+        <script src="~/assets/vendors/js/datatables/dataTables.buttons.min.js"></script>
+        <script src="~/assets/vendors/js/datatables/jszip.min.js"></script>
+        <script src="~/assets/vendors/js/datatables/buttons.html5.min.js"></script>
+        <script src="~/assets/vendors/js/datatables/pdfmake.min.js"></script>
+        <script src="~/assets/vendors/js/datatables/vfs_fonts.js"></script>
+        <script src="~/assets/vendors/js/datatables/buttons.print.min.js"></script>
+
+
+        <!-- End Page Vendor Js -->
+        <script src="~/assets/vendors/js/lity/lity.min.js"></script>
+        <script src="~/assets/js/pages/newsfeed.min.js"></script>
+        @RenderSection("CalendarScripts", false)
+        @RenderSection("FeedScripts", false)
+        @RenderSection("EmployeesScripts", false)
+    </body>
+</html>
