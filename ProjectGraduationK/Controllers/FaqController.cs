@@ -37,5 +37,14 @@ namespace ProjectGraduationK.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("{questionId}")]
+        public IActionResult DeleteQuestion(int questionId)
+        {
+            var questionToRemove = _context.Questions.Where(fm => fm.QuestionId == questionId).FirstOrDefault();
+            _context.Questions.Remove(questionToRemove);
+            _context.SaveChanges();
+            return Ok();
+        }
     }
 }
