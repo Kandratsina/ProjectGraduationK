@@ -1,54 +1,3 @@
-/*
-=========================================
-=========================================
-
-Item Name: Elisyam - Web App & Admin Dashboard Template
-Version: 1.5
-Author: SAEROX
-
-* =======================================
-*     TABLE OF CONTENTS
-* =======================================
-01) Globals
-02) Components
-  02.01) Timeline
-  02.02) Tabs
-  02.03) Alerts
-  02.04) Accordion
-  02.05) Popover
-  02.06) Tooltip
-  02.07) Notifications
-  02.08) Datepicker
-  02.09) Hover 
-03) Layout
-  03.01) Dashboard
-  03.02) Header
-  03.03) Sidebar
-  03.04) Offcanvas Sidebar
-  03.05) Widgets
-  03.06) Footer
-04) Applications
-  04.01) Mail
-  04.02) Calendar
-  04.03) Contact
-  04.04) Chat
-05) Pages
-  05.01) Authentication
-  05.02) Coming Soon
-  05.03) Error
-  05.04) Pricing Tables
-  05.05) Invoice
-  05.06) Search Results
-  05.07) Faq
-  05.08) Newsfeed
-  05.09) Friends
-  05.10) Groups
-  05.11) About
-06) Responsive
-=========================================
-========================================= */
-/* ========================================= */
-/*     01) ELISYAM GLOBALS                   */
 /* ========================================= */
 @import url(../../../../assets/icons/lineawesome/css/line-awesome.min.css);
 @import url(../../../../assets/icons/ionicons/css/ionicons.min.css);
@@ -1749,7 +1698,7 @@ a:hover.rounded-button {
 
 .bg-gradient-03 {
   background: #6859ea;
-  background: linear-gradient(135deg, #6859ea 0%, #6acbe0 80%) !important;
+  background: linear-gradient(135deg, #21406d 0%, #21406d 80%) !important;
 }
 
 .bg-gradient-04 {
