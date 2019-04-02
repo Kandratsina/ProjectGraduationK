@@ -21683,7 +21683,7 @@ return jQuery;
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Показано с _START_ по _END_ из _TOTAL_ строк",
 	
 	
 			/**
@@ -21726,7 +21726,7 @@ return jQuery;
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "(отфильтровано из _MAX_ total строк)",
 	
 	
 			/**
@@ -21982,7 +21982,7 @@ return jQuery;
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": "Совпадений не обнаружено"
 		},
 	
 	
