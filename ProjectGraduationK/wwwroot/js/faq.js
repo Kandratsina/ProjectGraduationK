@@ -2,30 +2,6 @@
 
     GetQuestions();
 
-    //$('#publishButton').click(function () {
-    //    PublishQuestion();
-    //});
-
-    //function PublishQuestion() {
-    //    let questionText = $('#questionText').val();
-    //    let answer = $('#answer').val();
-
-    //    $.ajax({
-    //        url: 'faq/SaveQuestion',
-    //        type: 'POST',
-    //        data: {
-    //            "questionText": questionText,
-    //            "answer": answer
-    //        },
-    //        success: function () {
-    //            location.reload();
-    //        },
-    //        error: function () {
-    //            alert('Failed to publish a question');
-    //        }
-    //    })
-    //}
-
     function DeleteQuestion(questionId) {
         $.ajax({
             url: 'faq/'.concat(questionId),
