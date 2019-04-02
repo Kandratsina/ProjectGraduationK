@@ -35,7 +35,7 @@ namespace ProjectGraduationK.Controllers
             _context.Questions.Add(question);
             _context.SaveChanges();
 
-            return Ok();
+            return RedirectToAction("Faq");
         }
 
         [HttpDelete("{questionId}")]
