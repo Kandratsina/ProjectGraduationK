@@ -16,5 +16,7 @@ namespace ProjectGraduationK.Data
 
         public DbSet<FeedMessage> FeedMessages { get; set; }
         public DbSet<CalendarEvent> CalendarEvents { get; set; }
+        public DbSet<Question> Questions { get; set; }
+
     }
 }
