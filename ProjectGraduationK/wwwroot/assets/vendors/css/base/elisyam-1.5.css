@@ -6685,7 +6685,7 @@ nav.navbar .dropdown-menu.notification .notifications-header {
 }
 
 nav.navbar .dropdown-menu.notification .notifications-header .notifications-overlay {
-  background: rgba(93, 83, 134, 0.8);
+  background: rgba(33, 64, 109, 0.8);
   width: 100%;
   height: 100%;
   position: absolute;
