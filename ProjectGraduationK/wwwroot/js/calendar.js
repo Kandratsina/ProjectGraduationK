@@ -100,27 +100,25 @@
         //Open modal dialog for edit event
         openAddEditForm();
     })
+
     $('#btnDelete').click(function () {
         if (selectedEvent != null && confirm('Are you sure?')) {
             $.ajax({
                 type: "DELETE",
                 url: '/calendar/'.concat(selectedEvent.eventId),
-                success: function (data) {
-                    if (data.status) {
-                        //Refresh the calendar
-                        FetchEventAndRenderCalendar();
-                        $('#myModal').modal('hide');
-                    }
-                },
                 error: function () {
                     alert('Failed');
                 }
             })
+            $('#myModalSave').modal('hide');
+            location.reload();
         }
     })
+
     $('#dtp1,#dtp2').datetimepicker({
         format: 'DD/MM/YYYY HH:mm A'
     });
+
     $('#chkIsFullDay').change(function () {
         if ($(this).is(':checked')) {
             $('#divEndDate').hide();
@@ -145,6 +143,7 @@
         $('#myModalSave').modal();
         
     }
+
     $('#btnSave').click(function () {
         //Validation/
         if ($('#txtSubject').val().trim() == "") {
@@ -178,20 +177,15 @@
             IsFullDay: $('#chkIsFullDay').is(':checked')
         }
         SaveEvent(data);
-        // call function for submit data to the server
+        $('#myModalSave').modal('hide');
+        location.reload();
     })
+
     function SaveEvent(data) {
         $.ajax({
             type: "POST",
             url: '/calendar/SaveEvent',
             data: data,
-            success: function (data) {
-                if (data.status) {
-                    //Refresh the calendar
-                    FetchEventAndRenderCalendar();
-                    $('#myModalSave').modal('hide');
-                }
-            },
             error: function () {
                 alert('Failed');
             }
